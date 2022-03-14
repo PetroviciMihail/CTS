@@ -4,33 +4,36 @@ import clase.Aplicant;
 import clase.Elev;
 import clase.interfete.IReader;
 
-import java.io.File;
+
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+
 
 public class EleviReader extends IReader {
 
+    public EleviReader(String numeFisier) throws FileNotFoundException {
+        super(numeFisier);
+    }
+
     @Override
-    public List<Aplicant> readAplicanti(String file) throws FileNotFoundException {
-        Scanner input2 = new Scanner(new File(file));
-        input2.useDelimiter(",|\n");
-        List<Aplicant> elevi = new ArrayList<Aplicant>();
+    public List<Aplicant> readAplicanti()  {
+        super.scanner.useDelimiter(",|\n");
+        List<Aplicant> elevi = new ArrayList<>();
 
-        while (input2.hasNext()) {
+        while (super.scanner.hasNext()) {
             Elev elev = new Elev();
-            super.citireAplicant(input2, elev);
+            super.citireAplicant(scanner, elev);
 
-            int clasa = input2.nextInt();
-            String tutore = input2.next();
+            int clasa = scanner.nextInt();
+            String tutore = scanner.next();
             elev.setClasa(clasa);
             elev.setTutore(tutore);
 
             elevi.add(elev);
         }
 
-        input2.close();
+        scanner.close();
         return elevi;
     }
 }
