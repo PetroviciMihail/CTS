@@ -1,4 +1,4 @@
-package mainComposite;
+package composite.mainComposite;
 
 import composite.Autobuz;
 import composite.Flota;
