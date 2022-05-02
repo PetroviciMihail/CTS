@@ -14,6 +14,8 @@ public class MetrouHandler extends Handler{
     public void afiseazaRecomandare(int distanta) {
         if(distanta<getPragSuperior()){
             System.out.println("este recomandat sa mergi cu metroul pentru distanta de "+ distanta);
+        }else {
+            nextHandler.afiseazaRecomandare(distanta);
         }
 
     }
