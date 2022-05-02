@@ -12,9 +12,9 @@ public class MetrouHandler extends Handler{
 
     @Override
     public void afiseazaRecomandare(int distanta) {
-
+        if(distanta<getPragSuperior()){
             System.out.println("este recomandat sa mergi cu metroul pentru distanta de "+ distanta);
-
+        }
 
     }
 }
