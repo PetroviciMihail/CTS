@@ -1,6 +1,5 @@
 package composite;
 
-import java.sql.SQLOutput;
 
 public class Autobuz implements IItem{
     private String producator;

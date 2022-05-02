@@ -10,7 +10,6 @@ public class Autobuz {
     public void deschideUsa1(){
         System.out.println("deschide usa 1");
     }
-
     public void deschideUsa2(){
         System.out.println("deschide usa 2");
     }
