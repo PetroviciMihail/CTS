@@ -15,6 +15,7 @@ public class Program {
 
         AutobuzBuilder builder= new AutobuzBuilder();
         builder.setTextDerulat("la multi ani").setOraIncepereProgram(12);
-        Autobuz autobuz3= autobuzBuilder.build();
+        Autobuz autobuz3= builder.build();
+        System.out.println(autobuz3.toString());
     }
 }
