@@ -1,7 +1,8 @@
-package teste;
+package teste.persoana;
 
-import clase.Persoana;
+import clase.persoana.Persoana;
 import org.junit.Test;
+import teste.persoana.CNPIncorect;
 
 import static org.junit.Assert.*;
 
